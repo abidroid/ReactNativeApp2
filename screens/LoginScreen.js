@@ -1,4 +1,4 @@
-import { View, Text, TextInput, ScrollView, StyleSheet, Image, Pressable } from 'react-native';
+import { View, Text, TextInput, ScrollView, StyleSheet, Image, Pressable, Alert } from 'react-native';
 import React from 'react';
 
 const LoginScreen = ({ navigation }) => {
@@ -25,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
                     placeholder='email'
                     onChangeText={onChangeEmail}
                     value={email}
-                    keyboardType='text-email'
+                    keyboardType='email-address'
                 />
                 <TextInput
                     style={loginStyles.textInputStyle}
@@ -36,7 +36,16 @@ const LoginScreen = ({ navigation }) => {
                 />
                 <Pressable
                     style={loginStyles.buttonStyle}
-                    onPress={() => navigation.navigate('Dashboard')}>
+                    onPress={() => { 
+                        
+                        if( email === 'Abid' && password === 'abid'){
+
+                            navigation.navigate('Dashboard') 
+                        }else{
+                            Alert.alert('Invalid email or password');
+                        }
+                        
+                        }}>
                     <Text style={loginStyles.buttonText}>LOGIN</Text>
                 </Pressable>
             </ScrollView>
