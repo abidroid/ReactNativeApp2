@@ -1,10 +1,20 @@
-import {View, Text, TextInput, ScrollView } from 'react-native';
+import {View, Text, TextInput, ScrollView , StyleSheet} from 'react-native';
 
 
 const LoginScreen = ({navigation}) => {
 
-    return <Text>Login Screen</Text>;
-
+    return (
+    <>
+    <Text style={loginStyles.txtStyle}>Login Screen</Text>
+    <Text>Learning Navigation</Text>
+    </>);
 };
 
 export default LoginScreen;
+
+const loginStyles = StyleSheet.create({
+
+    txtStyle: {
+        fontSize: 40,
+    }
+});
