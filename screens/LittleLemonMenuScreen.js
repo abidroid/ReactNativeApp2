@@ -27,7 +27,7 @@ const LittleLemonMenuScreen = () => {
         }
     }
 
-    useEffect(()=> getMenu());
+    useEffect(() => { getMenu() });
 
     return <View>
 

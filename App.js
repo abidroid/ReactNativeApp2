@@ -21,7 +21,7 @@ export default function App() {
         {/* <View style={styles.container}> */}
 
 
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName='Dashboard'>
           <Stack.Screen
             name='Login'
             component={LoginScreen}
