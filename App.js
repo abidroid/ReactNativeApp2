@@ -8,7 +8,7 @@ import CountriesFlagScreen from './screens/CountiesFlagScreen';
 import FlexBoxScreen from './screens/FlexBoxScreen';
 import LittleLemonMenuScreen from './screens/LittleLemonMenuScreen';
 import DmcScreen from './screens/DmcScreen';
-import T20Teams from './screens/T20TeamsScreen';
+import T20TeamsScreen from './screens/T20TeamsScreen';
 
 
 export default function App() {
