@@ -28,7 +28,7 @@ const LittleLemonMenuScreen = () => {
         }
     }
 
-    useEffect(() => { getMenu() });
+    useEffect(() => { getMenu() }, []);
 
 
     const Item = ({ data }) => {
