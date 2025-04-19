@@ -9,6 +9,7 @@ const screens = [
     {id: 1, title: 'DMC', component: 'DmcScreen'},
     {id: 2, title: 'FlexBox', component: 'FlexBoxScreen'},
     {id: 3, title: 'Country Flag API', component: 'CountriesFlagScreen'},
+    {id: 4, title: 'Little Lemon Menu API', component: 'LittleLemonMenuScreen'},
 ]
 
 const DashboardScreen = () => {
