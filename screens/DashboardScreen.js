@@ -10,6 +10,8 @@ const screens = [
     { id: 2, title: 'FlexBox', routeName: 'FlexBox' },
     { id: 3, title: 'Country Flag API', routeName: 'CountriesFlag' },
     { id: 4, title: 'Little Lemon Menu API', routeName: 'LittleLemonMenu' },
+    { id: 5, title: 'T20 Teams Local JSON', routeName: 'T20' },
+
 ]
 
 
