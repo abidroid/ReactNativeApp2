@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/LoginScreen';
 import DashboardScreen from './screens/DashboardScreen';
-import CountriesFlagScreen from './screens/CountiesFlagScreen';
+import ProductsListScreen from './screens/ProductsListScreen';
 import FlexBoxScreen from './screens/FlexBoxScreen';
 import LittleLemonMenuScreen from './screens/LittleLemonMenuScreen';
 import DmcScreen from './screens/DmcScreen';
@@ -37,8 +37,8 @@ export default function App() {
           />
 
           <Stack.Screen
-            name='CountriesFlag'
-            component={CountriesFlagScreen}
+            name='ProductsList'
+            component={ProductsListScreen}
           />
           <Stack.Screen
             name='FlexBox'

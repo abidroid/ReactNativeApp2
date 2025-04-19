@@ -8,7 +8,7 @@ import { Text, View, StyleSheet, FlatList, Pressable } from "react-native";
 const screens = [
     { id: 1, title: 'DMC', routeName: 'Dmc' },
     { id: 2, title: 'FlexBox', routeName: 'FlexBox' },
-    { id: 3, title: 'Country Flag API', routeName: 'CountriesFlag' },
+    { id: 3, title: 'Products List - Fake Store API', routeName: 'ProductsList' },
     { id: 4, title: 'Little Lemon Menu API', routeName: 'LittleLemonMenu' },
     { id: 5, title: 'T20 Teams Local JSON', routeName: 'T20' },
 

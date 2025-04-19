@@ -1,10 +1,10 @@
 
 import {View, Text} from 'react-native';
 
-const CountriesFlagScreen = () => {
+const ProductsListScreen = () => {
     return (
         <View><Text>Welcome</Text></View>
     );
 }
 
-export default CountriesFlagScreen;
+export default ProductsListScreen;
