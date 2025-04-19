@@ -7,6 +7,7 @@ import DashboardScreen from './screens/DashboardScreen';
 import CountriesFlagScreen from './screens/CountiesFlagScreen';
 import FlexBoxScreen from './screens/FlexBoxScreen';
 import LittleLemonMenuScreen from './screens/LittleLemonMenuScreen';
+import DmcScreen from './screens/DmcScreen';
 
 
 export default function App() {
@@ -28,6 +29,10 @@ export default function App() {
           <Stack.Screen
             name='Dashboard'
             component={DashboardScreen}
+          />
+          <Stack.Screen
+            name='Dmc'
+            component={DmcScreen}
           />
 
           <Stack.Screen

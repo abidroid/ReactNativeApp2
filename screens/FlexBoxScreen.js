@@ -1,4 +1,4 @@
-
+import {View, Text} from 'react-native'
 
 const FlexBoxScreen = () => {
     return (
