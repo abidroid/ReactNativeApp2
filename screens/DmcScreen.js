@@ -26,7 +26,7 @@ const DmcScreen = () => {
 
         let ob = eng + ur + ma + sc + isl + g;
 
-        let per = obtainedMarks * 100 / 600;
+        let per = ob * 100 / 600;
 
         setObtainedMarks(`Obtained Marks: ${ob}`);
         setPercentage(`Percentage: ${per}`);
