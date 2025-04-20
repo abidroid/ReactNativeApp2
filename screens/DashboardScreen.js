@@ -61,6 +61,7 @@ const dashboardStyles = StyleSheet.create({
 
     itemText: {
         color: 'white',
+        fontSize: 20,
 
     }
 });
