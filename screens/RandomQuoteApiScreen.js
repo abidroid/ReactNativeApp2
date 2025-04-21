@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 const RandomQuoteApiScreen = () => {
@@ -18,13 +18,53 @@ const RandomQuoteApiScreen = () => {
             setQuote(json);
         } catch (error) {
             console.error(error);
-        }finally {
+        } finally {
             setLoading(false);
         }
     };
 
-    
+    useEffect(() => { getRandomQuote() });
+
+    // UI
+    return (
+        <View style={styles.container}>
+
+            <Text style={styles.quoteText}>{quote.quote}</Text>
+            <Text style={styles.authorText}>{quote.author}</Text>
+
+            <Pressable style={styles.buttonStyle}
+                onPress={() => getRandomQuote()}
+            >
+                <Text>Get Random Quote</Text>
+            </Pressable>
+        </View>
+    );
 
 }
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        gap: 16,
+    },
+
+    quoteText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+
+    authorText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+
+    buttonStyle: {
+        backgroundColor: 'green',
+        paddingVertical: 10,
+        paddingHorizontal: 50,
+        borderRadius: 16,
+    }
+});
 
 export default RandomQuoteApiScreen;
