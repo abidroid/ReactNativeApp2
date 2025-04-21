@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ActivityIndicator } from 'react-native';
 
 const RandomQuoteApiScreen = () => {
 
@@ -23,7 +23,7 @@ const RandomQuoteApiScreen = () => {
         }
     };
 
-    useEffect(() => { getRandomQuote() });
+    useEffect(() => { getRandomQuote() }, []);
 
     // UI
     return (
@@ -32,10 +32,11 @@ const RandomQuoteApiScreen = () => {
             <Text style={styles.quoteText}>{quote.quote}</Text>
             <Text style={styles.authorText}>{quote.author}</Text>
 
+            {isLoading ? <ActivityIndicator /> : <View/>}
             <Pressable style={styles.buttonStyle}
                 onPress={() => getRandomQuote()}
             >
-                <Text>Get Random Quote</Text>
+                <Text style={styles.buttonText}>Get Random Quote</Text>
             </Pressable>
         </View>
     );
@@ -45,10 +46,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         gap: 16,
+        padding: 16,
     },
 
     quoteText: {
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
     },
@@ -64,6 +66,12 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 50,
         borderRadius: 16,
+    },
+
+    buttonText: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 18,
     }
 });
 
