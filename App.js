@@ -49,7 +49,7 @@ export default function App() {
             component={LittleLemonMenuScreen}
           />
           <Stack.Screen
-          options={{title: 'T20 Teams'}}
+            options={{ title: 'T20 Teams' }}
             name='T20'
             component={T20TeamsScreen}
           />

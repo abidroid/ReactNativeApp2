@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     productColumn: {
 
         gap: 12,
-        backgroundColor: '#white',
+        backgroundColor: 'white',
         height: '100%',
         flex: 1,
 
