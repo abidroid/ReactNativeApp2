@@ -9,6 +9,7 @@ import FlexBoxScreen from './screens/FlexBoxScreen';
 import LittleLemonMenuScreen from './screens/LittleLemonMenuScreen';
 import DmcScreen from './screens/DmcScreen';
 import T20TeamsScreen from './screens/T20TeamsScreen';
+import RandomQuoteApiScreen from './screens/RandomQuoteApiScreen';
 
 
 export default function App() {
@@ -52,6 +53,11 @@ export default function App() {
             options={{ title: 'T20 Teams' }}
             name='T20'
             component={T20TeamsScreen}
+          />
+          <Stack.Screen
+            options={{ title: 'Random Quote' }}
+            name='RandomQuote'
+            component={RandomQuoteApiScreen}
           />
 
 

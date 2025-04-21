@@ -11,6 +11,7 @@ const screens = [
     { id: 3, title: 'Products List - Fake Store API', routeName: 'ProductsList' },
     { id: 4, title: 'Little Lemon Menu API', routeName: 'LittleLemonMenu' },
     { id: 5, title: 'T20 Teams Local JSON', routeName: 'T20' },
+    { id: 6, title: 'Random Quote API - Dummy JSON', routeName: 'RandomQuote' },
 
 ]
 
