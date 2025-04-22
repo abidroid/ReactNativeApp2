@@ -59,6 +59,11 @@ export default function App() {
             name='RandomQuote'
             component={RandomQuoteApiScreen}
           />
+          <Stack.Screen
+            options={{ title: 'Login' }}
+            name='LoginWithDummyApi'
+            component={LoginWithDummyApiScreen}
+          />
 
 
         </Stack.Navigator>
