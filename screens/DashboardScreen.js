@@ -12,7 +12,7 @@ const screens = [
     { id: 4, title: 'Little Lemon Menu API', routeName: 'LittleLemonMenu' },
     { id: 5, title: 'T20 Teams Local JSON', routeName: 'T20' },
     { id: 6, title: 'Random Quote API - Dummy JSON', routeName: 'RandomQuote' },
-    { id: 7, title: 'Login Wit hDummyApi Screen', routeName: 'LoginWithDummyApi' },
+    { id: 7, title: 'Login With DummyApi Screen', routeName: 'LoginWithDummyApi' },
 
 ]
 
