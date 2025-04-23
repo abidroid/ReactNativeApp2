@@ -5,6 +5,14 @@ const LoginWithDummyApiScreen = () => {
 
     const [email, onChangeEmail] = React.useState('');
     const [password, onChangePassword] = React.useState('');
+
+
+    const login = () => {
+
+        const url = '';
+    };
+
+
     return (
         <View style={styles.container}>
             <ScrollView>
@@ -45,6 +53,7 @@ const styles = StyleSheet.create({
 
     logo: {
         alignSelf: 'center',
+        borderRadius: '50%',
     },
     message: {
         textAlign: 'center',
