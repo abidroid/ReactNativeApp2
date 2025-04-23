@@ -5,11 +5,35 @@ const LoginWithDummyApiScreen = () => {
 
     const [email, onChangeEmail] = React.useState('');
     const [password, onChangePassword] = React.useState('');
+    const [result, setResult] = React.useState('');
+    const [isLogginIn, setLogginIn] = React.useState(false);
 
+    const login = async () => {
 
-    const login = () => {
+        setLogginIn(true);
 
-        const url = '';
+        const url = 'https://dummyjson.com/auth/login';
+
+        try{
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+    
+                    username: email,
+                    password: password,
+                    expiresInMins: 30, // optional, defaults to 60
+                }),
+                credentials: 'include' // Include cookies (e.g., accessToken) in the request
+            });
+    
+            const json = await response.json();
+            setResult(json);
+        }catch(error){
+            setResult(error);
+        }finally {
+            setLogginIn(false);
+        }
     };
 
 
@@ -17,7 +41,7 @@ const LoginWithDummyApiScreen = () => {
         <View style={styles.container}>
             <ScrollView>
                 <Image
-                style={styles.logo}
+                    style={styles.logo}
                     source={require('../img/intellilogics.jpg')} />
                 <Text style={styles.message}>Please login to continue</Text>
 
@@ -34,9 +58,12 @@ const LoginWithDummyApiScreen = () => {
                     value={password}
                 />
 
-                <Pressable style={styles.buttonContainer}>
+                <Pressable style={styles.buttonContainer}
+                    onPress={() => login()}
+                >
                     <Text style={styles.buttonText}>LOGIN</Text>
                 </Pressable>
+                <Text>{result}</Text>
             </ScrollView>
         </View>
     );
