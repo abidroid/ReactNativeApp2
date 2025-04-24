@@ -10,6 +10,7 @@ const LoginWithDummyApiScreen = () => {
 
     const login = async () => {
 
+        console.log('executed');
         setLogginIn(true);
 
         const url = 'https://dummyjson.com/auth/login';
@@ -22,15 +23,19 @@ const LoginWithDummyApiScreen = () => {
     
                     username: email,
                     password: password,
-                    expiresInMins: 30, // optional, defaults to 60
+                    //expiresInMins: 30, // optional, defaults to 60
                 }),
                 credentials: 'include' // Include cookies (e.g., accessToken) in the request
             });
     
+            console.log(response.status);
+            
             const json = await response.json();
-            setResult(json);
+            console.log(json);
+            
+            setResult(json.username);
         }catch(error){
-            setResult(error);
+            setResult(error.message);
         }finally {
             setLogginIn(false);
         }
