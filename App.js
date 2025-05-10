@@ -11,6 +11,7 @@ import DmcScreen from './screens/DmcScreen';
 import T20TeamsScreen from './screens/T20TeamsScreen';
 import RandomQuoteApiScreen from './screens/RandomQuoteApiScreen';
 import LoginWithDummyApiScreen from './screens/LoginWithDummyApiScreen';
+import ImagesDemoScreen from './screens/ImagesDemoScreen';
 
 export default function App() {
 
@@ -63,6 +64,11 @@ export default function App() {
             options={{ title: 'Login' }}
             name='LoginWithDummyApi'
             component={LoginWithDummyApiScreen}
+          />
+          <Stack.Screen
+            options={{ title: 'Images Demo' }}
+            name='ImagesDemo'
+            component={ImagesDemoScreen}
           />
 
 
